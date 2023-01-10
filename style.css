@@ -153,5 +153,88 @@
   border-radius: 4px;
   font-size: 12pt;
   font-weight: 500;
+  z-index: 100;
+}
+
+.friends {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  left: 72px;
+  height: 100vh;
+}
+
+.friends:last-child {
+  margin-bottom: 0;
+}
+
+.friends__bar {
+  background-color: #36393f;
+}
+
+.friends__find {
+  background-color: #202225;
+  height: 100%;
+  width: 100%;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #96989d;
+}
+
+.friends__find:focus {
+  outline: 0;
+  color: #ffffff;
+}
+
+.friends__find-wrapper {
+  height: 48px;
+  width: 240px;
+  padding: 8px;
+  border-bottom: 1px solid #232428;
+}
+
+.friends__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px;
+  height: 108px;
+}
+
+.friends__menu-button {
+  display: none;
+}
+
+.friends__menu-fake-button {
+  display: block;
+  width: 100%;
+  padding: 12px 8px;
+  padding-left: 48px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: medium;
+  border-radius: 4px;
+  background-color: #42464d;
 }
 /*# sourceMappingURL=style.css.map */

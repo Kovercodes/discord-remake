@@ -46,5 +46,36 @@
         </div>
       </nav>
     </section>
+    <section class="friends">
+      <article class="friends__bar">
+        <div class="friends__find-wrapper">
+          <input
+            type="search"
+            name="friend-search"
+            id="friend-search"
+            placeholder="Find or start a conversation"
+            class="friends__find"
+          />
+        </div>
+        <div class="friends__menu">
+          <input
+            type="radio"
+            name="friends"
+            id="friends"
+            class="friends__menu-button"
+          />
+          <label for="friends" class="friends__menu-fake-button">Friends</label>
+          <input
+            type="radio"
+            name="nitro"
+            id="nitro"
+            class="friends__menu-button"
+          />
+          <label for="nitro" class="friends__menu-fake-button">Nitro</label>
+        </div>
+        <div class="friends__list"></div>
+      </article>
+      <article class="friends__me"></article>
+    </section>
   </body>
 </html>

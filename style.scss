@@ -133,5 +133,71 @@
     border-radius: 4px;
     font-size: 12pt;
     font-weight: 500;
+    z-index: 100;
+  }
+}
+
+.friends {
+  z-index: 1;
+  display: flex;
+  margin-bottom: 8px;
+  justify-content: space-between;
+  flex-direction: column;
+  position: fixed;
+  left: 72px;
+  height: 100vh;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__bar {
+    background-color: #36393f;
+  }
+
+  &__find {
+    background-color: #202225;
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #96989d;
+
+    &:focus {
+      outline: 0;
+      color: #ffffff;
+    }
+    &-wrapper {
+      height: 48px;
+      width: 240px;
+      padding: 8px;
+      border-bottom: 1px solid #232428;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    height: 108px;
+
+    &-button {
+      display: none;
+    }
+
+    &-fake-button {
+      display: block;
+      width: 100%;
+      padding: 12px 8px;
+      padding-left: 48px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: medium;
+      border-radius: 4px;
+      background-color: #42464d;
+    }
   }
 }
