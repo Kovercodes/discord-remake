@@ -1,0 +1,137 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  font-family: inter, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.chat-nav {
+  position: fixed;
+  width: 72px;
+  background-color: #202225;
+  height: 100vh;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+
+    &:nth-child(3) .chat-nav__logo {
+      background-image: url(img/chat-nav-musulman.png);
+      &:nth-of-type(1):after {
+        content: "3k+";
+        font-size: 12pt;
+        font-weight: medium;
+        width: 32;
+        height: auto;
+        border-radius: 16px;
+        padding: 2px;
+        background-color: #ed4245;
+        position: absolute;
+        right: 4px;
+        align-self: flex-end;
+      }
+    }
+
+    &:nth-child(4) .chat-nav__logo {
+      background-image: url(img/chat-nav-white-haired.png);
+      &:nth-of-type(1):after {
+        content: "230";
+        font-size: 12pt;
+        font-weight: medium;
+        width: 32;
+        height: auto;
+        border-radius: 16px;
+        padding: 2px;
+        background-color: #ed4245;
+        position: absolute;
+        right: 4px;
+        align-self: flex-end;
+      }
+    }
+
+    &:nth-child(5) .chat-nav__logo {
+      background-image: url(img/chat-nav-add.png);
+    }
+    &:nth-child(6) .chat-nav__logo {
+      background-image: url(img/chat-nav-explore.png);
+    }
+
+    &--discord .chat-nav__logo {
+      border-radius: 16px;
+      background-image: url(img/chat-nav-discord.png);
+    }
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    font-size: 0;
+    border-radius: 48px;
+    transition: border-radius 0.3s linear;
+    transition-delay: 0s;
+
+    &:hover {
+      border-radius: 16px;
+
+      & ~ .chat-nav__tip {
+        scale: 1;
+      }
+    }
+
+    &--selected::before {
+      content: "";
+      height: 40px;
+      width: 4px;
+      border-radius: 0 4px 4px 0;
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+    }
+
+    &:not(.chat-nav__logo--selected) {
+      &::before {
+        content: "";
+        height: 8px;
+        width: 4px;
+        border-radius: 0 4px 4px 0;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
+  &__divider {
+    height: 2px;
+    width: 32px;
+    background-color: #373a3f;
+    border-radius: 2px;
+    margin: 0 auto;
+  }
+
+  &__tip {
+    transition: scale 0.3s;
+    scale: 0;
+    padding: 8px;
+    background-color: #202225;
+    color: #fff;
+    position: absolute;
+    left: 84px;
+    width: 215px;
+    max-height: 60px;
+    border-radius: 4px;
+    font-size: 12pt;
+    font-weight: 500;
+  }
+}
