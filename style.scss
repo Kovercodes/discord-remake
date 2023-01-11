@@ -138,21 +138,21 @@
 }
 
 .friends {
-  z-index: 1;
   display: flex;
-  margin-bottom: 8px;
   justify-content: space-between;
   flex-direction: column;
   position: fixed;
   left: 72px;
   height: 100vh;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  min-width: 240px;
 
   &__bar {
-    background-color: #36393f;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #2f3136;
+    height: 95vh;
+    width: 240px;
   }
 
   &__find {
@@ -170,7 +170,6 @@
     }
     &-wrapper {
       height: 48px;
-      width: 240px;
       padding: 8px;
       border-bottom: 1px solid #232428;
     }
@@ -183,12 +182,17 @@
     align-items: center;
     padding: 8px;
     height: 108px;
+    width: 240px;
 
     &-button {
+      &:checked + .friends__menu-fake-button {
+        background-color: #42464d;
+      }
       display: none;
     }
 
     &-fake-button {
+      transition: 0.3s linear;
       display: block;
       width: 100%;
       padding: 12px 8px;
@@ -197,7 +201,120 @@
       font-size: 15px;
       font-weight: medium;
       border-radius: 4px;
-      background-color: #42464d;
+      background-color: #2f3136;
+      background-repeat: no-repeat;
+      background-position: 15px 50%;
+
+      &--friends {
+        background-image: url(img/friends-user.png);
+      }
+      &--nitro {
+        background-image: url(img/friends-nitro.png);
+      }
     }
+  }
+
+  &__chats {
+    padding: 8px;
+    padding-top: 0;
+  }
+
+  &__header {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 24px;
+    color: #96989d;
+
+    text-transform: uppercase;
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+    }
+  }
+
+  &__new-message {
+    transition: 0.3s linear;
+    width: 12px;
+    height: 12px;
+    font-size: 0px;
+    background-image: url(img/friends-plus.png);
+    background-color: transparent;
+    background-position: 50%;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    height: 5vh;
+    background-color: #292b2f;
+    width: 240px;
+  }
+
+  &__avatar {
+    height: 32px;
+    width: 32px;
+    padding: 8px;
+    background-color: #757e8a;
+    border-radius: 32px;
+  }
+
+  &__username {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+    /* identical to box height, or 100% */
+
+    color: #ffffff;
+  }
+
+  &__userid {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 12px;
+    /* identical to box height, or 109% */
+
+    color: #96989d;
+  }
+
+  &__chat-buttons-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 80px;
+  }
+
+  &__chat-button {
+    font-size: 0;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-color: transparent;
+    &--micro {
+      background-image: url(img/friends-mic.png);
+    }
+
+    &--headphones {
+      background-image: url(img/friends-phones.png);
+    }
+
+    &--parameters {
+      background-image: url(img/friends-gear.png);
+    }
+  }
+
+  &__profile-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 }

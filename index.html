@@ -14,6 +14,25 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+
     <title>Discord</title>
   </head>
   <body>
@@ -60,22 +79,65 @@
         <div class="friends__menu">
           <input
             type="radio"
-            name="friends"
+            name="nitroFriends"
             id="friends"
             class="friends__menu-button"
+            checked
           />
-          <label for="friends" class="friends__menu-fake-button">Friends</label>
+          <label
+            for="friends"
+            class="friends__menu-fake-button friends__menu-fake-button--friends"
+            >Friends</label
+          >
           <input
             type="radio"
-            name="nitro"
+            name="nitroFriends"
             id="nitro"
             class="friends__menu-button"
           />
-          <label for="nitro" class="friends__menu-fake-button">Nitro</label>
+          <label
+            for="nitro"
+            class="friends__menu-fake-button friends__menu-fake-button--nitro"
+            >Nitro</label
+          >
         </div>
+
+        <div class="friends__chats">
+          <div class="friends__header-wrapper">
+            <h2 class="friends__header">Direct messages</h2>
+            <button class="friends__new-message">Add new message</button>
+          </div>
+          <div class="friends__messages-wrapper"></div>
+        </div>
+
         <div class="friends__list"></div>
       </article>
-      <article class="friends__me"></article>
+
+      <article class="friends__me">
+        <div class="friends__profile-info">
+          <img
+            src="img/friends-discord.png"
+            alt="User's icon"
+            class="friends__avatar"
+          />
+          <div class="friends__name-group">
+            <h2 class="friends__username">Alex Slad.</h2>
+            <p class="friends__userid">#3777</p>
+          </div>
+        </div>
+
+        <div class="friends__chat-buttons-wrapper">
+          <button class="friends__chat-button friends__chat-button--micro">
+            Turn on / off the microphone
+          </button>
+          <button class="friends__chat-button friends__chat-button--headphones">
+            Turn on / off the headphones
+          </button>
+          <button class="friends__chat-button friends__chat-button--parameters">
+            Open preferences
+          </button>
+        </div>
+      </article>
     </section>
   </body>
 </html>
