@@ -110,7 +110,7 @@
           <div class="friends__messages-wrapper"></div>
         </div>
 
-        <div class="friends__list"></div>
+        <div id="directContainer" class="friends__list"></div>
       </article>
 
       <article class="friends__me">
@@ -140,5 +140,14 @@
         </div>
       </article>
     </section>
+
+    <template id="direct">
+      <div class="direct">
+        <div class="direct__avatar"></div>
+        <div class="direct__text"></div>
+      </div>
+    </template>
+
+    <script src="scripts/direct-chats.js"></script>
   </body>
 </html>

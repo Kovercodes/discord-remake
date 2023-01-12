@@ -130,7 +130,8 @@
   position: fixed;
   left: 72px;
   height: 100vh;
-  min-width: 240px;
+  max-width: 240px;
+  z-index: 0;
 }
 .friends__bar {
   display: flex;
@@ -291,4 +292,28 @@
   position: absolute;
   left: 28px;
   bottom: 8px;
+}
+.friends__list {
+  flex: 1;
+}
+
+.direct {
+  gap: 8px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 12px;
+}
+.direct__avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  background-color: #36393f;
+}
+.direct__text {
+  height: 16px;
+  min-width: 24px;
+  flex-grow: 5;
+  border-radius: 24px;
+  background-color: #36393f;
 }/*# sourceMappingURL=style.css.map */
