@@ -155,7 +155,7 @@
   color: #ffffff;
 }
 .friends__find-wrapper {
-  height: 48px;
+  min-height: 48px;
   padding: 8px;
   border-bottom: 1px solid #232428;
 }
@@ -316,4 +316,41 @@
   flex-grow: 5;
   border-radius: 24px;
   background-color: #36393f;
+}
+
+.chat {
+  background-color: #37393f;
+  position: fixed;
+  left: 312px;
+  height: 100vh;
+  width: 1128px;
+  max-width: 1604px;
+}
+.chat__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  height: 48px;
+  border-bottom: 1px solid #232428;
+}
+.chat__name-hashtag {
+  display: inline-block;
+  font-size: 0;
+  height: 24px;
+  width: 24px;
+  background-image: url(img/chat-hashtag.png);
+}
+.chat__title {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+.chat__title-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
 }/*# sourceMappingURL=style.css.map */

@@ -170,7 +170,7 @@
       color: #ffffff;
     }
     &-wrapper {
-      height: 48px;
+      min-height: 48px;
       padding: 8px;
       border-bottom: 1px solid #232428;
     }
@@ -357,5 +357,50 @@
     flex-grow: 5;
     border-radius: 24px;
     background-color: #36393f;
+  }
+}
+
+.chat {
+  background-color: #37393f;
+  position: fixed;
+  left: 312px;
+  height: 100vh;
+  //for developing on mac, when release delete the next lines
+  width: 1128px;
+  max-width: 1604px;
+
+  &__nav {
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    height: 48px;
+    border-bottom: 1px solid #232428;
+  }
+
+  &__name-hashtag {
+    display: inline-block;
+    font-size: 0;
+    height: 24px;
+    width: 24px;
+    background-image: url(img/chat-hashtag.png);
+  }
+
+  &__title {
+    display: block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+
+    &-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 6px;
+    }
   }
 }
