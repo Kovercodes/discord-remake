@@ -369,7 +369,31 @@
   width: 1128px;
   max-width: 1604px;
 
+  &__find {
+    outline: none;
+    padding: 6px;
+    font-weight: 500;
+    border-radius: 3px;
+    color: #6f737a;
+    background-color: #202225;
+  }
+
+  &__magnicifier {
+    position: absolute;
+    background-image: url(img/chat-magnifier.png);
+    height: 18px;
+    width: 18px;
+    font-size: 0;
+
+    right: 94px;
+    top: 14px;
+  }
+
   &__nav {
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__header {
@@ -402,5 +426,34 @@
       align-items: center;
       gap: 6px;
     }
+  }
+
+  &__nav-block {
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+
+  &__bell {
+    background-image: url(img/chat-bell.png);
+  }
+
+  &__pin {
+    background-image: url(img/chat-pin.png);
+  }
+
+  &__users {
+    background-image: url(img/chat-user.png);
+  }
+
+  &__at-symbol {
+    background-image: url(img/chat-at.png);
+  }
+
+  &__question {
+    background-image: url(img/chat-help.png);
   }
 }

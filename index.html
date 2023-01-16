@@ -148,12 +148,19 @@
           <h2 class="chat__title">general</h2>
         </div>
         <nav class="chat__nav">
-          <button class="chat__bell">Bell</button>
-          <button class="chat__pin">Pin</button>
-          <button class="chat__users">Users</button>
-          <input type="text" name="chatFind" id="chatFind" class="chat__find" />
-          <button class="chat__at-symbol">@</button>
-          <button class="chat__question">?</button>
+          <button class="chat__bell chat__nav-block">Bell</button>
+          <button class="chat__pin chat__nav-block">Pin</button>
+          <button class="chat__users chat__nav-block">Users</button>
+          <input
+            type="text"
+            name="chatFind"
+            id="chatFind"
+            placeholder="Search"
+            class="chat__find"
+          />
+          <div class="chat__magnicifier">Loupe</div>
+          <button class="chat__at-symbol chat__nav-block">@</button>
+          <button class="chat__question chat__nav-block">?</button>
         </nav>
       </header>
       <article class="chat__messages"></article>
