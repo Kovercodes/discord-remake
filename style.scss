@@ -456,4 +456,77 @@
   &__question {
     background-image: url(img/chat-help.png);
   }
+
+  &__messages {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: calc(100vh - 48px);
+    width: 100%;
+    padding: 16px 20px;
+  }
+
+  &__message-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #40444b;
+  }
+
+  &__message {
+    flex-grow: 10;
+    border-left: 1px solid #37393f;
+    background-color: #40444b;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #dcddde;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__add-material {
+    width: 44px;
+    height: 44px;
+    font-size: 0;
+    background-color: #40444b;
+    background-image: url(img/chat-plus.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &__other-sends {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-right: 15px;
+  }
+
+  &__other-send {
+    font-size: 0;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &--gift {
+      background-image: url(img/chat-gift.png);
+    }
+    &--gif {
+      background-image: url(img/chat-gif.png);
+    }
+    &--smile {
+      background-image: url(img/chat-face.png);
+    }
+  }
 }
