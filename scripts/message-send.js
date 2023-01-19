@@ -9,13 +9,13 @@ if ("content" in document.createElement("template")) {
     console.log("btn");
     if (event.code === "Enter") {
       console.log("ENTER");
-      if (field.value !== "") {
+      if (field.value) {
         console.log(field.value);
-        let clone = template.cloneNode(true);
+        const clone = template.cloneNode(true);
         container.appendChild(clone);
         messageCount++;
         const text = document.querySelector(
-          `#messageText:nth-of-type(${messageCount})`
+          `.chat__direct .message:last-child .message__text-part .message__text`
         );
         console.log(text);
         text.textContent = field.value;
