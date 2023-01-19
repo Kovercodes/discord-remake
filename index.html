@@ -163,28 +163,31 @@
           <button class="chat__question chat__nav-block">?</button>
         </nav>
       </header>
-      <article class="chat__messages">
-        <div class="chat__message-row">
-          <button class="chat__add-material">Add media</button>
-          <input
-            type="text"
-            name="newMessage"
-            id="newMessage"
-            class="chat__message"
-          />
-          <div class="chat__other-sends">
-            <button class="chat__other-send chat__other-send--gift">
-              Send gift
-            </button>
-            <button class="chat__other-send chat__other-send--gif">
-              Send .gif
-            </button>
-            <button class="chat__other-send chat__other-send--smile">
-              Send emoji
-            </button>
+      <div class="chat__wrapper">
+        <article class="chat__direct"></article>
+        <article class="chat__messages">
+          <div class="chat__message-row">
+            <button class="chat__add-material">Add media</button>
+            <input
+              type="text"
+              name="newMessage"
+              id="newMessage"
+              class="chat__message"
+            />
+            <div class="chat__other-sends">
+              <button class="chat__other-send chat__other-send--gift">
+                Send gift
+              </button>
+              <button class="chat__other-send chat__other-send--gif">
+                Send .gif
+              </button>
+              <button class="chat__other-send chat__other-send--smile">
+                Send emoji
+              </button>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
+      </div>
     </main>
 
     <template id="direct">
@@ -194,6 +197,17 @@
       </div>
     </template>
 
+    <template id="message">
+      <div class="message">
+        <div class="message__avatar">Avatar</div>
+        <div class="message__text-part">
+          <h2 class="message__user-name">Discord</h2>
+          <p class="message__text" id="messageText"></p>
+        </div>
+      </div>
+    </template>
+
     <script src="scripts/direct-chats.js"></script>
+    <script src="scripts/message-send.js"></script>
   </body>
 </html>
