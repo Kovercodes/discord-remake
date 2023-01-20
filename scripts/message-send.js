@@ -19,6 +19,7 @@ if ("content" in document.createElement("template")) {
         );
         console.log(text);
         text.textContent = field.value;
+        field.value = "";
       }
     }
   };
